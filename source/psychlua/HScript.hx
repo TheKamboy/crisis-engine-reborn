@@ -11,6 +11,7 @@ import psychlua.FunkinLua;
 
 #if HSCRIPT_ALLOWED
 import tea.SScript;
+
 class HScript extends SScript
 {
 	public var modFolder:String;
@@ -428,12 +429,16 @@ class HScript extends SScript
 	}
 	#end
 
-	override public function destroy()
+	public function destroy()
 	{
 		origin = null;
 		#if LUA_ALLOWED parentLua = null; #end
 
-		super.destroy();
+		super.kill();
+	}
+
+	function doString(code:String) {
+		throw new haxe.exceptions.NotImplementedException();
 	}
 }
 
