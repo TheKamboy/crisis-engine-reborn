@@ -82,6 +82,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			'noRatingWhenBotplay',
 			'bool');
 		addOption(option);
+
+		var option:Option = new Option('No Strum Lights:',
+			"Should the Strums not light up?",
+			'noStrumLight',
+			'string',
+			['Always', 'Botplay Only', 'Keep Light']);
+		addOption(option);
 		
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",

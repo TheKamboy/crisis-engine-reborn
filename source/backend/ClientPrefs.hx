@@ -48,6 +48,7 @@ import states.TitleState;
 
 	// New Settings
 	public var noRatingWhenBotplay:Bool = true;
+	public var noStrumLight:String = 'Botplay Only'; // Always, Botplay Only, Keep Light
 
 	public var gameplaySettings:Map<String, Dynamic> = [
 		'scrollspeed' => 1.0,
