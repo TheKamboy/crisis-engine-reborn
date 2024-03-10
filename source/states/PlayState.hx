@@ -2484,6 +2484,7 @@ class PlayState extends MusicBeatState
 			antialias = !isPixelStage;
 		}
 
+		if (!ClientPrefs.data.noRatingWhenBotplay && !cpuControlled) {
 		rating.loadGraphic(Paths.image(uiPrefix + daRating.image + uiSuffix));
 		rating.screenCenter();
 		rating.x = placement - 40;
@@ -2582,6 +2583,7 @@ class PlayState extends MusicBeatState
 			},
 			startDelay: Conductor.crochet * 0.002 / playbackRate
 		});
+	}
 	}
 
 	public var strumsBlocked:Array<Bool> = [];

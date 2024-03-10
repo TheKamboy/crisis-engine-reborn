@@ -76,6 +76,12 @@ class VisualsUISubState extends BaseOptionsMenu
 			'hideHud',
 			'bool');
 		addOption(option);
+
+		var option:Option = new Option('No Rating Popups in Botplay',
+			'If checked, hides Rating Popups if Botplay is enabled, eliminating some lag.',
+			'noRatingWhenBotplay',
+			'bool');
+		addOption(option);
 		
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",

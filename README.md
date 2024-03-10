@@ -1,4 +1,12 @@
-# Friday Night Funkin' - Psych Engine
+# Crisis Engine Reborn
+A redone version of Crisis Engine, based on the latest version of Psych Engine! :3
+
+## Features (may not be added yet)
+* Lackluster Botplay Lag Fix (for now)
+* More Customization
+
+<details>
+    <summary>Original README</summary>
 Engine originally used on [Mind Games Mod](https://gamebanana.com/mods/301107), intended to be a fix for the vanilla version's many issues while keeping the casual play aspect of it. Also aiming to be an easier alternative to newbie coders.
 
 ## Installation:
@@ -105,3 +113,4 @@ _____________________________________
 * You can reset your Score on Freeplay/Story Mode by pressing Reset button.
 * You can listen to a song or adjust Scroll Speed/Damage taken/etc. on Freeplay by pressing Space.
 * You can enable "Combo Stacking" in Gameplay Options. This causes the combo sprites to just be one sprite with an animation rather than sprites spawning each note hit.
+</details>
