@@ -263,6 +263,9 @@ class PlayState extends MusicBeatState
 	// Callbacks for stages
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
+	
+	// New Setting Variables
+	public var songTxt:FlxText;
 
 	override public function create()
 	{
@@ -491,6 +494,36 @@ class PlayState extends MusicBeatState
 		uiGroup.add(timeBar);
 		uiGroup.add(timeTxt);
 
+
+		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
+		healthBar.screenCenter(X);
+		healthBar.leftToRight = false;
+		healthBar.scrollFactor.set();
+		healthBar.visible = !ClientPrefs.data.hideHud;
+		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
+		reloadHealthBarColors();
+		uiGroup.add(healthBar);
+
+		songTxt = new FlxText(10, healthBar.y + 40, 0, songName + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
+		songTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songTxt.scrollFactor.set();
+		songTxt.borderSize = 1.25;
+		songTxt.alpha = 0.6;
+		
+		if (ClientPrefs.data.showWaterMark) {
+			songTxt.visible = true;
+		} else {
+			songTxt.visible = false;
+		}
+
+		// for setup when more styles are added
+		if (ClientPrefs.data.waterMarkStyle == "guh") {
+			songTxt.text = "no";
+		}
+
+		add(songTxt);
+		//uiGroup.add(songTxt);
+
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		noteGroup.add(strumLineNotes);
 
@@ -529,14 +562,6 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
-		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
-		healthBar.screenCenter(X);
-		healthBar.leftToRight = false;
-		healthBar.scrollFactor.set();
-		healthBar.visible = !ClientPrefs.data.hideHud;
-		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
-		reloadHealthBarColors();
-		uiGroup.add(healthBar);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;

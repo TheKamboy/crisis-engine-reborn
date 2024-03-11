@@ -83,12 +83,25 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 
+		var option:Option = new Option('Enable Watermark',
+			'If checked, shows a watermark for the song and difficulty.',
+			'showWaterMark',
+			'bool');
+		addOption(option);
+		
 		var option:Option = new Option('No Strum Lights:',
-			"Should the Strums not light up?",
+			"Should the Strums not light up? (DOES NOT WORK)",
 			'noStrumLight',
 			'string',
 			['Always', 'Botplay Only', 'Keep Light']);
 		addOption(option);
+
+		var option:Option = new Option('Watermark Style:',
+			"What style do you want for the watermark? Current only one style though lol",
+			'waterMarkStyle',
+			'string',
+			['Crisis']);
+		addOption(option);	
 		
 		var option:Option = new Option('Time Bar:',
 			"What should the Time Bar display?",

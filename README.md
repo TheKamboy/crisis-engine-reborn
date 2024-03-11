@@ -3,16 +3,17 @@
 A redone version of Crisis Engine, based on the latest version of Psych Engine! :3
 
 ## Features (may not be added yet)
-
-> [!NOTE]
-> Most of what is mentioned may not be implemented yet
-
 - [x] Lackluster Botplay Lag Fix (for now)
 - [ ] JS Engine Style Win Icon Support
-- [ ] More Customization
-  - [ ] More HUDs
-  - [ ] Maybe more icon bops
-  - [ ] Of course some themes for watermarks
+- [x] Watermark (not a cool feature, but I need todos)
+
+## Customization  
+- [ ] More HUDs
+- [ ] Maybe more icon bops
+- [ ] Of course some themes for watermarks
+
+## Some (rare) Bugfixes!
+- Found a bug with the JS Engine winning icon source code where if there was no winning icon, it would never go back to the not dying state when escaping death (doesn't happen for me my ass)
 
 <details>
     <summary>Original README</summary>
