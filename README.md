@@ -5,8 +5,8 @@ A redone version of Crisis Engine, based on the latest version of Psych Engine! 
 > [!NOTE]
 > Most of what is mentioned may not be implemented yet
 
-* [.] Lackluster Botplay Lag Fix (for now)
-* [.] More Customization
+* [x] Lackluster Botplay Lag Fix (for now)
+* [ ] More Customization
   * [ ] More HUDs
   * [ ] Maybe more icon bops
   * [ ] Of course some themes for watermarks
