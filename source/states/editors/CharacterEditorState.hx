@@ -712,7 +712,7 @@ class CharacterEditorState extends MusicBeatState
 		{
 			if(sender == healthIconInputText) {
 				var lastIcon = healthIcon.getCharacter();
-				healthIcon.changeIcon(healthIconInputText.text, false);
+				healthIcon.changeIcon(healthIconInputText.text);
 				character.healthIcon = healthIconInputText.text;
 				if(lastIcon != healthIcon.getCharacter()) updatePresence();
 			}
@@ -1096,7 +1096,7 @@ class CharacterEditorState extends MusicBeatState
 		healthColorStepperG.value = character.healthColorArray[1];
 		healthColorStepperB.value = character.healthColorArray[2];
 		healthBar.leftBar.color = healthBar.rightBar.color = FlxColor.fromRGB(character.healthColorArray[0], character.healthColorArray[1], character.healthColorArray[2]);
-		healthIcon.changeIcon(character.healthIcon, false);
+		healthIcon.changeIcon(character.healthIcon);
 		updatePresence();
 	}
 
