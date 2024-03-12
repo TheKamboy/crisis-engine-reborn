@@ -89,11 +89,10 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 		
-		var option:Option = new Option('No Strum Lights:',
-			"Should the Strums not light up? (DOES NOT WORK)",
+		var option:Option = new Option('No Strum Light in Botplay',
+			"Should the Strums not light up when in Botplay?",
 			'noStrumLight',
-			'string',
-			['Always', 'Botplay Only', 'Keep Light']);
+			'bool');
 		addOption(option);
 
 		var option:Option = new Option('Watermark Style:',

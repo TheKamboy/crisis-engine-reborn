@@ -48,7 +48,7 @@ import states.TitleState;
 
 	// New Settings
 	public var noRatingWhenBotplay:Bool = true;
-	public var noStrumLight:String = 'Botplay Only'; // Always, Botplay Only, Keep Light
+	public var noStrumLight:Bool = false; 
 
 	public var showWaterMark:Bool = true;
 	public var waterMarkStyle:String = 'Crisis';
