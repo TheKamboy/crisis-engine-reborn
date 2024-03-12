@@ -1720,8 +1720,11 @@ class PlayState extends MusicBeatState
 			var secondsTotal:Int = Math.floor(songCalc / 1000);
 			if(secondsTotal < 0) secondsTotal = 0;
 
-			if(ClientPrefs.data.timeBarType != 'Song Name')
+			if(ClientPrefs.data.timeBarType != 'Song Name' && ClientPrefs.data.timeBarType != 'Elapsed / End')
 				timeTxt.text = FlxStringUtil.formatTime(secondsTotal, false);
+			else if (ClientPrefs.data.timeBarType == 'Elapsed / End') {
+				timeTxt.text = FlxStringUtil.formatTime(curTime / 1000, false) + " / " + FlxStringUtil.formatTime(songLength / 1000, false);	
+			}
 		}
 
 		if (camZooming)

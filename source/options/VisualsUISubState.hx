@@ -106,7 +106,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			"What should the Time Bar display?",
 			'timeBarType',
 			'string',
-			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
+			['Time Left', 'Time Elapsed', 'Song Name', 'Elapsed / End', 'Disabled']);
 		addOption(option);
 
 		var option:Option = new Option('Hide Time Bar',
