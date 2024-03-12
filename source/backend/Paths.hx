@@ -204,6 +204,14 @@ class Paths
 		if(postfix != null) songKey += '-' + postfix;
 		//trace('songKey test: $songKey');
 		var voices = returnSound(null, songKey, 'songs');
+
+		if (voices == null) {
+			var songKey:String = '${formatToSongPath(song)}/voices';
+			if(postfix != null) songKey += '-' + postfix;
+			//trace('songKey test: $songKey');
+			var voices = returnSound(null, songKey, 'songs');
+		}
+
 		return voices;
 	}
 
@@ -211,6 +219,12 @@ class Paths
 	{
 		var songKey:String = '${formatToSongPath(song)}/Inst';
 		var inst = returnSound(null, songKey, 'songs');
+
+		if (inst == null) {
+			var songKey:String = '${formatToSongPath(song)}/inst';
+			var inst = returnSound(null, songKey, 'songs');
+		}
+
 		return inst;
 	}
 

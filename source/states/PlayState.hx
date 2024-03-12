@@ -521,8 +521,8 @@ class PlayState extends MusicBeatState
 			songTxt.text = "no";
 		}
 
-		add(songTxt);
-		//uiGroup.add(songTxt);
+		//add(songTxt);
+		uiGroup.add(songTxt);
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		noteGroup.add(strumLineNotes);
