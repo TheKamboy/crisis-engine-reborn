@@ -50,6 +50,8 @@ import states.TitleState;
 	public var noRatingWhenBotplay:Bool = true;
 	public var noStrumLight:Bool = false; 
 
+	public var hideTimeBar:Bool = false;
+
 	public var showWaterMark:Bool = true;
 	public var waterMarkStyle:String = 'Crisis';
 

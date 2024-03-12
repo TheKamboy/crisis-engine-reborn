@@ -490,7 +490,9 @@ class PlayState extends MusicBeatState
 		timeBar.scrollFactor.set();
 		timeBar.screenCenter(X);
 		timeBar.alpha = 0;
-		timeBar.visible = showTime;
+
+		if (ClientPrefs.data.hideTimeBar || !showTime) timeBar.visible = false;
+		else timeBar.visible = true;
 		uiGroup.add(timeBar);
 		uiGroup.add(timeTxt);
 

@@ -109,6 +109,12 @@ class VisualsUISubState extends BaseOptionsMenu
 			['Time Left', 'Time Elapsed', 'Song Name', 'Disabled']);
 		addOption(option);
 
+		var option:Option = new Option('Hide Time Bar',
+			"Do you like not having the Time Bar like in OS Engine? Turn this setting on then.",
+			'hideTimeBar',
+			'bool');
+		addOption(option);
+
 		var option:Option = new Option('Flashing Lights',
 			"Uncheck this if you're sensitive to flashing lights!",
 			'flashing',
