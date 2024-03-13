@@ -3116,12 +3116,23 @@ class PlayState extends MusicBeatState
 		{
 			var timeSub:Float = Conductor.songPosition - Conductor.offset;
 			var syncTime:Float = 20 * playbackRate;
-			if (Math.abs(FlxG.sound.music.time - timeSub) > syncTime ||
-			(vocals.length > 0 && Math.abs(vocals.time - timeSub) > syncTime) ||
-			(opponentVocals.length > 0 && Math.abs(opponentVocals.time - timeSub) > syncTime))
+			final gamerValue = 20 * playbackRate;
+			// if (Math.abs(FlxG.sound.music.time - timeSub) > syncTime ||
+			// (vocals.length > 0 && Math.abs(vocals.time - timeSub) > syncTime) ||
+			// (opponentVocals.length > 0 && Math.abs(opponentVocals.time - timeSub) > syncTime))
+			// {
+			// 	resyncVocals();
+			// }
+			if (playbackRate < 256) //much better resync code, doesn't just resync every step!!
+			{
+			if (FlxG.sound.music.time > Conductor.songPosition + gamerValue
+				|| FlxG.sound.music.time < Conductor.songPosition - gamerValue
+				|| FlxG.sound.music.time < 500)
 			{
 				resyncVocals();
 			}
+		}
+	
 		}
 
 		super.stepHit();
