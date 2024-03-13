@@ -3061,6 +3061,7 @@ class PlayState extends MusicBeatState
 
 		if(opponentVocals.length <= 0) vocals.volume = 1;
 		if (ClientPrefs.data.noStrumLight && !cpuControlled) strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+		else if (!ClientPrefs.data.noStrumLight) strumPlayAnim(true, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
 		note.hitByOpponent = true;
 		
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
@@ -3134,9 +3135,13 @@ class PlayState extends MusicBeatState
 			var spr = playerStrums.members[note.noteData];
 			if(spr != null) {
 				if (ClientPrefs.data.noStrumLight && !cpuControlled) spr.playAnim('confirm', true);
+				else if (!ClientPrefs.data.noStrumLight) spr.playAnim('confirm', true);
 			}
 		}
-		else if (ClientPrefs.data.noStrumLight && !cpuControlled) strumPlayAnim(false, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+		else {
+			if (ClientPrefs.data.noStrumLight && !cpuControlled) strumPlayAnim(false, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+			else if (!ClientPrefs.data.noStrumLight) strumPlayAnim(false, Std.int(Math.abs(note.noteData)), Conductor.stepCrochet * 1.25 / 1000 / playbackRate);
+		}
 		vocals.volume = 1;
 
 		if (!note.isSustainNote)
