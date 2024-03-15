@@ -2,6 +2,10 @@
 
 A redone version of Crisis Engine, based on the latest version of Psych Engine! :3
 
+> [!NOTE]
+> This is NOT a competetor to JS Engine. It's a engine that I'm working on for mainly myself since JS Engine doesn't work as well than this (probably because my computer sucks). If you want WAY more features, go check out JS Engine instead.
+[Click here to view JS Engine](https://github.com/JordanSantiagoYT/FNF-PsychEngine-NoBotplayLag/)
+
 ## Features (may not be added yet)
 - [x] Lackluster Botplay Lag Fix (for now)
 - [ ] JS Engine Style Win Icon Support
