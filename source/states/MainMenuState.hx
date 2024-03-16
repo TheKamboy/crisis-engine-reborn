@@ -10,6 +10,7 @@ import options.OptionsState;
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.7.3'; // This is also used for Discord RPC
+	public static var crisisVersion:String = 'Beta!';
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -97,6 +98,11 @@ class MainMenuState extends MusicBeatState
 		add(fnfVer);
 		changeItem();
 
+		var crisisVer:FlxText = new FlxText(12, FlxG.height - 64, 0, "Crisis Engine Reborn v" + psychEngineVersion, 12);
+		crisisVer.scrollFactor.set();
+		crisisVer.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		add(crisisVer);
+		
 		#if ACHIEVEMENTS_ALLOWED
 		// Unlocks "Freaky on a Friday Night" achievement if it's a Friday and between 18:00 PM and 23:59 PM
 		var leDate = Date.now();
