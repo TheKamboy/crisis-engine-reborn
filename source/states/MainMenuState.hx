@@ -98,7 +98,7 @@ class MainMenuState extends MusicBeatState
 		add(fnfVer);
 		changeItem();
 
-		var crisisVer:FlxText = new FlxText(12, FlxG.height - 64, 0, "Crisis Engine Reborn v" + psychEngineVersion, 12);
+		var crisisVer:FlxText = new FlxText(12, FlxG.height - 64, 0, "Crisis Engine Reborn v" + crisisVersion, 12);
 		crisisVer.scrollFactor.set();
 		crisisVer.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(crisisVer);
