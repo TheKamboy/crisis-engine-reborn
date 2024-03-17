@@ -498,12 +498,16 @@ class PlayState extends MusicBeatState
 		uiGroup.add(timeTxt);
 
 
-		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, maxHealth);
+		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
 		healthBar.screenCenter(X);
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
 		healthBar.alpha = ClientPrefs.data.healthBarAlpha;
+
+		// for max health
+		healthBar.setBounds(0, maxHealth);
+
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
@@ -2215,6 +2219,7 @@ class PlayState extends MusicBeatState
 						}
 				}
 				reloadHealthBarColors();
+				set_health(health); // lazy fix for icons not updating to losing/winning
 
 			case 'Change Scroll Speed':
 				if (songSpeedType != "constant")
