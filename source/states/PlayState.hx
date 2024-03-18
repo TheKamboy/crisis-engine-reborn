@@ -579,7 +579,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y - 78;
 
-		songTxt = new FlxText(10, healthBar.y + 40, 0, songName + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
+		songTxt = new FlxText(10, healthBar.y + 40, 0, SONG.song + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
 		songTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songTxt.scrollFactor.set();
 		songTxt.borderSize = 1.25;
