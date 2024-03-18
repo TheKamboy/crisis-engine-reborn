@@ -55,6 +55,8 @@ import states.TitleState;
 	public var botPlayFade:Bool = true;
 	public var kadeBotPlayPos:Bool = false;
 
+	public var noWinningIcon:Bool = false;
+
 	public var showWaterMark:Bool = true;
 	public var waterMarkStyle:String = 'Crisis';
 

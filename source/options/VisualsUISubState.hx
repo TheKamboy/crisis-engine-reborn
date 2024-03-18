@@ -115,6 +115,12 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 
+		var option:Option = new Option('No Winning Icons',
+			"I don't know why you would want to turn this on, but you can if you want.",
+			'noWinningIcon',
+			'bool');
+		addOption(option);
+
 		var option:Option = new Option('Flashing Lights',
 			"Uncheck this if you're sensitive to flashing lights!",
 			'flashing',
