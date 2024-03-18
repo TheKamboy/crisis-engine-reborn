@@ -575,7 +575,7 @@ class PlayState extends MusicBeatState
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
-		uiGroup.add(botplayTxt);
+
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y - 78;
 
@@ -583,6 +583,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.x = healthBar.x + healthBar.width / 2 - 75;
 			botplayTxt.y = healthBar.y + (ClientPrefs.data.downScroll ? 100 : -100);
 		}
+		uiGroup.add(botplayTxt);
 
 		songTxt = new FlxText(10, healthBar.y + 40, 0, SONG.song + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
 		songTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
