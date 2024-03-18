@@ -579,6 +579,11 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.data.downScroll)
 			botplayTxt.y = timeBar.y - 78;
 
+		if(ClientPrefs.data.kadeBotPlayPos) {
+			botplayTxt.x = healthBar.x + healthBar.width / 2 - 75;
+			botplayTxt.y = healthBar.y + (ClientPrefs.data.downScroll ? 100 : -100);
+		}
+
 		songTxt = new FlxText(10, healthBar.y + 40, 0, SONG.song + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
 		songTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songTxt.scrollFactor.set();
@@ -1677,7 +1682,7 @@ class PlayState extends MusicBeatState
 		setOnScripts('curDecStep', curDecStep);
 		setOnScripts('curDecBeat', curDecBeat);
 
-		if(botplayTxt != null && botplayTxt.visible) {
+		if(botplayTxt != null && botplayTxt.visible && ClientPrefs.data.botPlayFade) {
 			botplaySine += 180 * elapsed;
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}

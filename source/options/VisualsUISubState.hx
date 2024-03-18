@@ -133,6 +133,18 @@ class VisualsUISubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 
+		var option:Option = new Option('Botplay Text Fades',
+			"If unchecked, disables the Botplay Text fading animation.",
+			'botPlayFade',
+			'bool');
+		addOption(option);
+
+		var option:Option = new Option('Botplay Text Above Health Bar',
+			"Just like one classic FNF Engine.",
+			'kadeBotPlayPos',
+			'bool');
+		addOption(option);
+		
 		var option:Option = new Option('Health Bar Opacity',
 			'How much transparent should the health bar and icons be.',
 			'healthBarAlpha',
