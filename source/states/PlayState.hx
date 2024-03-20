@@ -3231,7 +3231,7 @@ class PlayState extends MusicBeatState
 		if (SONG.needsVoices && FlxG.sound.music.time >= -ClientPrefs.data.noteOffset)
 		{
 			var timeSub:Float = Conductor.songPosition - Conductor.offset;
-			var syncTime:Float = 20 * playbackRate;
+			//var syncTime:Float = 20 * playbackRate;
 			final gamerValue = 20 * playbackRate;
 			// if (Math.abs(FlxG.sound.music.time - timeSub) > syncTime ||
 			// (vocals.length > 0 && Math.abs(vocals.time - timeSub) > syncTime) ||
@@ -3247,6 +3247,8 @@ class PlayState extends MusicBeatState
 			{
 				resyncVocals();
 			}
+
+			resyncVocals();
 		}
 	
 		}
