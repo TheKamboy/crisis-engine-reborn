@@ -3248,7 +3248,7 @@ class PlayState extends MusicBeatState
 				resyncVocals();
 			}
 
-			resyncVocals();
+			//resyncVocals();
 		}
 	
 		}
