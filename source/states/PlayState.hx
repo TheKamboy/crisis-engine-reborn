@@ -580,7 +580,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBar.y - 78;
 
 		if(ClientPrefs.data.kadeBotPlayPos) {
-			botplayTxt.x = healthBar.x;
+			// botplayTxt.x = healthBar.x;
 			botplayTxt.y = healthBar.y + (ClientPrefs.data.downScroll ? 100 : -100);
 		}
 		uiGroup.add(botplayTxt);
