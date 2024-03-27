@@ -50,6 +50,8 @@ import states.TitleState;
 	public var noRatingWhenBotplay:Bool = true;
 	public var noStrumLight:Bool = false; 
 
+	public var healthBarType:String = "Normal";
+
 	public var hideTimeBar:Bool = false;
 
 	public var botPlayFade:Bool = true;
