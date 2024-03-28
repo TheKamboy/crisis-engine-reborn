@@ -513,12 +513,12 @@ class PlayState extends MusicBeatState
 		uiGroup.add(healthBar);
 
 		healthBarBG = new AttachedSprite('healthBar');
+		healthBarBG.x = healthBar.x;
 		healthBarBG.y = healthBar.y;
 		healthBarBG.screenCenter(X);
 		healthBarBG.scrollFactor.set();
 		healthBarBG.visible = healthBar.visible;
-		healthBarBG.xAdd = -4;
-		healthBarBG.yAdd = -4;
+		healthBarBG.alpha = ClientPrefs.data.healthBarAlpha;
 		uiGroup.add(healthBarBG);
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
