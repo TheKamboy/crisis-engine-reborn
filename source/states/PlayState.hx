@@ -179,6 +179,8 @@ class PlayState extends MusicBeatState
 	public var combo:Int = 0;
 
 	public var healthBar:Bar;
+	public var healthBarBG:AttachedSprite;
+	
 	public var timeBar:Bar;
 	var songPercent:Float = 0;
 
@@ -509,6 +511,15 @@ class PlayState extends MusicBeatState
 
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
+
+		healthBarBG = new AttachedSprite('healthBar');
+		healthBarBG.y = healthBar.y;
+		healthBarBG.screenCenter(X);
+		healthBarBG.scrollFactor.set();
+		healthBarBG.visible = healthBar.visible;
+		healthBarBG.xAdd = -4;
+		healthBarBG.yAdd = -4;
+		uiGroup.add(healthBarBG);
 
 		strumLineNotes = new FlxTypedGroup<StrumNote>();
 		noteGroup.add(strumLineNotes);
