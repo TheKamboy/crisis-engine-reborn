@@ -71,6 +71,12 @@ class VisualsUISubState extends BaseOptionsMenu
 		option.decimals = 1;
 		addOption(option);
 
+		var option:Option = new Option('Allow Old Health Bar Mods',
+			"This option will bring back the old Health Bar Background variable for old health bar scripts, but will break newer scripts.",
+			'enableHBbgSupport',
+			'bool');
+		addOption(option);
+
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',
 			'hideHud',

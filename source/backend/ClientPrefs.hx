@@ -51,6 +51,7 @@ import states.TitleState;
 	public var noStrumLight:Bool = false; 
 
 	public var healthBarType:String = "Normal";
+	public var enableHBbgSupport:Bool = false;
 
 	public var hideTimeBar:Bool = false;
 
