@@ -8,7 +8,7 @@ A redone version of Crisis Engine, based on the latest version of Psych Engine! 
 
 ## Features (may not be added yet)
 - [x] Lackluster Botplay Lag Fix (for now)
-- [ ] JS Engine Style Win Icon Support
+- [x] JS Engine Style Win Icon Support
 - [x] Watermark (not a cool feature, but I need todos)
 
 ## Customization  
