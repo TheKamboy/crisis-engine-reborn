@@ -7,6 +7,9 @@ A redone version of Crisis Engine, based on the latest version of Psych Engine! 
 
 [Click here to view JS Engine](https://github.com/JordanSantiagoYT/FNF-PsychEngine-NoBotplayLag/)
 
+## BUGS
+- [ ] Longs notes are played before the note is even hit
+
 ## Features (may not be added yet)
 - [x] Lackluster Botplay Lag Fix (for now)
 - [x] JS Engine Style Win Icon Support
