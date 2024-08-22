@@ -177,6 +177,7 @@ class PlayState extends MusicBeatState
 	public var health(default, set):Float = 1;
 	public var maxHealth:Float = 2;
 	public var combo:Int = 0;
+	public var enemyCombo:Int = 0;
 
 	public var healthBar:Bar;
 	public var healthBarBG:AttachedSprite;
@@ -3090,7 +3091,10 @@ class PlayState extends MusicBeatState
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
 
-		if (!note.isSustainNote) invalidateNote(note);
+		if (!note.isSustainNote) { 
+			enemyCombo++;
+			invalidateNote(note);
+		}
 	}
 
 	public function goodNoteHit(note:Note):Void
@@ -3170,7 +3174,7 @@ class PlayState extends MusicBeatState
 		if (!note.isSustainNote)
 		{
 			combo++;
-			if(combo > 9999) combo = 9999;
+			// if(combo > 9999) combo = 9999;
 			popUpScore(note);
 		}
 		var gainHealth:Bool = true; // prevent health gain, *if* sustains are treated as a singular note
