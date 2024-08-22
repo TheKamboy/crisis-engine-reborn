@@ -3,7 +3,8 @@
 A redone version of Crisis Engine, based on the latest version of Psych Engine! :3
 
 > [!NOTE]
-> This is NOT a competetor to JS Engine. It's a engine that I'm working on for mainly myself since JS Engine doesn't work as well than this (probably because my computer sucks). If you want WAY more features, go check out JS Engine instead.
+> This is NOT a competetor to JS Engine. It's a engine that I'm working on for fun.
+
 [Click here to view JS Engine](https://github.com/JordanSantiagoYT/FNF-PsychEngine-NoBotplayLag/)
 
 ## Features (may not be added yet)
@@ -15,6 +16,9 @@ A redone version of Crisis Engine, based on the latest version of Psych Engine! 
 - [ ] More HUDs
 - [ ] Maybe more icon bops
 - [ ] Of course some themes for watermarks
+
+## Psych Engine Improvements!
+- Opponent Notes don't go past the strums anymore, due to an oversight with an *if* statement.
 
 ## Some (rare) Bugfixes!
 - Found a bug with the JS Engine winning icon source code where if there was no winning icon, it would never go back to the not dying state when escaping death (doesn't happen for me my ass)
