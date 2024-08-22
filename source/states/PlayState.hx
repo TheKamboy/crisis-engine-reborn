@@ -3066,11 +3066,6 @@ class PlayState extends MusicBeatState
 		var result:Dynamic = callOnLuas('opponentNoteHitPre', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHitPre', [note]);
 
-		if (!note.isSustainNote) { 
-			enemyCombo++;
-			invalidateNote(note);
-		}
-
 		if (songName != 'tutorial')
 			camZooming = true;
 
@@ -3103,6 +3098,11 @@ class PlayState extends MusicBeatState
 		
 		var result:Dynamic = callOnLuas('opponentNoteHit', [notes.members.indexOf(note), Math.abs(note.noteData), note.noteType, note.isSustainNote]);
 		if(result != LuaUtils.Function_Stop && result != LuaUtils.Function_StopHScript && result != LuaUtils.Function_StopAll) callOnHScript('opponentNoteHit', [note]);
+
+		if (!note.isSustainNote) { 
+			enemyCombo++;
+			invalidateNote(note);
+		}
 	}
 
 	public function goodNoteHit(note:Note):Void
