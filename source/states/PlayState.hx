@@ -561,25 +561,6 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
-		songTxt = new FlxText(10, healthBar.y + 40, 0, SONG.song + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
-		songTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		songTxt.scrollFactor.set();
-		songTxt.borderSize = 1.25;
-		songTxt.alpha = 0.6;
-		
-		if (ClientPrefs.data.showWaterMark) {
-			songTxt.visible = true;
-		} else {
-			songTxt.visible = false;
-		}
-
-		// for setup when more styles are added
-		if (ClientPrefs.data.waterMarkStyle == "guh") {
-			songTxt.text = "no";
-		}
-
-		//add(songTxt);
-		uiGroup.add(songTxt);
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
@@ -615,6 +596,26 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = healthBar.y + (ClientPrefs.data.downScroll ? 100 : -100);
 		}
 		uiGroup.add(botplayTxt);
+
+		songTxt = new FlxText(10, healthBar.y + 40, 0, SONG.song + " (" + Difficulty.getString(storyDifficulty) + ") - CER", 20);
+		songTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		songTxt.scrollFactor.set();
+		songTxt.borderSize = 1.25;
+		songTxt.alpha = 0.6;
+		
+		if (ClientPrefs.data.showWaterMark) {
+			songTxt.visible = true;
+		} else {
+			songTxt.visible = false;
+		}
+
+		// for setup when more styles are added
+		if (ClientPrefs.data.waterMarkStyle == "guh") {
+			songTxt.text = "no";
+		}
+
+		//add(songTxt);
+		uiGroup.add(songTxt);
 
 		uiGroup.cameras = [camHUD];
 		noteGroup.cameras = [camHUD];
